@@ -1,10 +1,11 @@
-const express = require("express");
+const express = require('express');
 const app = express();
+const PORT = 8080;
 
-app.get("/health", (req, res) => {
-  res.json({ status: "OK" });
+app.get('/health', (req, res) => {
+    res.status(200).json({ "status": "OK" });
 });
 
-app.listen(8080, () => {
-  console.log("Server running");
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
